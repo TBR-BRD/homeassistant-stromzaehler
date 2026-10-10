@@ -1,0 +1,40 @@
+sensor:
+  - name: "HWR Netzbezug Total"
+    unique_id: hwr_netzbezug_total
+    state_topic: "tele/<HWR_TASMOTA_TOPIC>/SENSOR"
+    value_template: "{{ value_json.HWR_Pow.Total_in | float(0) }}"
+    unit_of_measurement: "kWh"
+    device_class: energy
+    state_class: total_increasing
+
+  - name: "HWR Netzeinspeisung Total"
+    unique_id: hwr_netzeinspeisung_total
+    state_topic: "tele/<HWR_TASMOTA_TOPIC>/SENSOR"
+    value_template: "{{ value_json.HWR_Pow.Total_out | float(0) }}"
+    unit_of_measurement: "kWh"
+    device_class: energy
+    state_class: total_increasing
+
+  - name: "HWR aktuelle Leistung"
+    unique_id: hwr_aktuelle_leistung
+    state_topic: "tele/<HWR_TASMOTA_TOPIC>/SENSOR"
+    value_template: "{{ value_json.HWR_Pow.Power_curr | float(0) }}"
+    unit_of_measurement: "W"
+    device_class: power
+    state_class: measurement
+
+  - name: "PV Erzeugung Total"
+    unique_id: pv_erzeugung_total
+    state_topic: "tele/<PV_TASMOTA_TOPIC>/SENSOR"
+    value_template: "{{ value_json.PV.PVG | float(0) }}"
+    unit_of_measurement: "kWh"
+    device_class: energy
+    state_class: total_increasing
+
+  - name: "PV aktuelle Leistung"
+    unique_id: pv_aktuelle_leistung
+    state_topic: "tele/<PV_TASMOTA_TOPIC>/SENSOR"
+    value_template: "{{ value_json.PV.PVL | float(0) }}"
+    unit_of_measurement: "W"
+    device_class: power
+    state_class: measurement

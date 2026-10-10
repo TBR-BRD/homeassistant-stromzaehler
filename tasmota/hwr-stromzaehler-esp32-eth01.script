@@ -1,0 +1,40 @@
+>D 42
+y=0
+m=0
+d=0
+power=0
+power1=0
+key="PVOUTPUT_API_KEY_HIER_EINTRAGEN"
+id="PVOUTPUT_SYSTEM_ID_HIER_EINTRAGEN"
+ws="WebSend [pvoutput.org]"
+
+>B
+=>sensor53 r
+tper=20
+
+>M 3
++1,5,s,0,9600,HWR_Pow
++2,4,c,1,-50,HWR_Gas
++3,15,c,1,-50,HWR_WB
+1,77070100010800ff@1000+33772000,HWR_Pow_Bezug,kWh,Total_in,4
+1,77070100100700ff@1,HWR_Pow_Leistung,W,Power_curr,16
+1,77070100020800ff@1000+31721000,HWR_Pow_Einspeisung,kWh,Total_out,4
+2,1-0:1.8.0*255(@100+756868,HWR_Gas_Bezug,cbm,HWR_Gas_Bezug,2
+3,1-0:1.8.0*255(@1000+1363500,HWR_WB_Bezug,kWh,HWR_WB_Bezug,1
+#
+
+>S
+power=sml[1]
+power1=(1000*power)
+
+>T
+if upsecs%600==0
+then
+y=sb(tstamp 0 4)
+m=sb(tstamp 5 2)
+d=sb(tstamp 8 2)
+
+=>%ws%/service/r2/addstatus.jsp?key=%key%&sid=%id%&d=%1.0(y)%%2.0(m)%%2.0(d)%&t=%1(sb(tstamp 11 5))%&v3=%power1%&c1=1
+endif
+
+>R

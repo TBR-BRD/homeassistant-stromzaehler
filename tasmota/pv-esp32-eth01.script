@@ -1,0 +1,36 @@
+>D 42
+y=0
+m=0
+d=0
+power=0
+power1=0
+key="PVOUTPUT_API_KEY_HIER_EINTRAGEN"
+id="PVOUTPUT_SYSTEM_ID_HIER_EINTRAGEN"
+ws="WebSend [pvoutput.org]"
+
+>B
+=>sensor53 r
+tper=20
+
+>M 1
++1,5,s,0,9600,PV
+1,77070100010800ff@1000+195000,PVB,kWh,PVB,4
+1,77070100100700ff@1,PVL,W,PVL,16
+1,77070100020800ff@1000+51660000,PVG,kWh,PVG,4
+#
+
+>S
+power=sml[3]
+power1=(1000*power)
+
+>T
+if upsecs%600==0
+then
+y=sb(tstamp 0 4)
+m=sb(tstamp 5 2)
+d=sb(tstamp 8 2)
+
+=>%ws%/service/r2/addstatus.jsp?key=%key%&sid=%id%&d=%1.0(y)%%2.0(m)%%2.0(d)%&t=%1(sb(tstamp 11 5))%&v1=%power1%&c1=1
+endif
+
+>R
