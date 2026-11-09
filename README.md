@@ -5,6 +5,10 @@ Dokumentation und Beispielkonfigurationen fuer zwei Tasmota/ESP32-Zaehleradapter
 - Hauswirtschaftsraum: Netzbezug und Netzeinspeisung am Itron Zweirichtungszaehler mit bitShake SmartMeterReader-UART.
 - PV-Anlage: PV-Erzeugung der 8-kW-Anlage mit ESP32-ETH01 / WT32-ETH01.
 
+![Itron Zweirichtungszaehler mit bitShake SmartMeterReader-UART am optischen Ausgang](docs/images/itron-zweirichtungszaehler-bitshake.jpg)
+
+*Itron Zweirichtungszaehler im Hauswirtschaftsraum mit aufgesetztem bitShake SmartMeterReader-UART. Seriennummern und Codes sind unkenntlich gemacht.*
+
 Ziel ist die kabelgebundene Integration beider Zaehler in Home Assistant Energy unter:
 
 ```text
