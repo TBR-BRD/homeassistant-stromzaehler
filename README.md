@@ -17,6 +17,12 @@ Ziel ist die kabelgebundene Integration beider Zaehler in Home Assistant Energy 
 http://<HOME_ASSISTANT_IP>:8123/energy/overview
 ```
 
+<br>
+<a href="https://www.buymeacoffee.com/thoralf.brandt" target="_blank">
+  <img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174">
+</a>
+<br>
+
 ## Bestand
 
 | Aufgabe | IP | Hardware | Firmware | Messwerte |

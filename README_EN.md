@@ -17,6 +17,12 @@ The goal is a wired integration of both meters into Home Assistant Energy at:
 http://<HOME_ASSISTANT_IP>:8123/energy/overview
 ```
 
+<br>
+<a href="https://www.buymeacoffee.com/thoralf.brandt" target="_blank">
+  <img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174">
+</a>
+<br>
+
 ## Inventory
 
 | Task | IP | Hardware | Firmware | Readings |
