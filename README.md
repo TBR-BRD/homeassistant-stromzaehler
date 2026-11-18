@@ -1,5 +1,7 @@
 # Home Assistant Stromzaehler
 
+🇩🇪 Deutsch · [🇬🇧 English](README_EN.md)
+
 Dokumentation und Beispielkonfigurationen fuer zwei Tasmota/ESP32-Zaehleradapter im Hausnetz:
 
 - Hauswirtschaftsraum: Netzbezug und Netzeinspeisung am Itron Zweirichtungszaehler mit bitShake SmartMeterReader-UART.
